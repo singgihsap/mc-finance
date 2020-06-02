@@ -1,0 +1,34 @@
+.menu-navigation {
+  .nav {
+    padding: 20px 0;
+    
+    &-item {
+      
+    }
+
+    &-link {
+      font-size: 16px;
+      color: #656565;
+      padding: 10px 20px;
+
+      &:hover {
+        color: $mcf-orange-old;
+        font-weight: bold;
+      }
+
+      &.active {
+        font-weight: bold;
+        color: $mcf-orange-old;
+
+        &:after {
+          content: '';
+          display: block;
+          background-color: $mcf-orange-old;
+          height: 3px;
+          width: 100%;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}

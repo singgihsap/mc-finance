@@ -1,0 +1,20 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 324px;
+  position: relative;
+  padding-top: 20px;
+
+  @include element('title') {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h1 {
+      font-size: 32px;
+      color: $white;
+    }
+  }
+}

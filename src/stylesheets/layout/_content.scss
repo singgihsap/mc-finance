@@ -1,5 +1,11 @@
 .content {
-  padding: 2rem 1rem;
+  &-main {
+    padding-top: 120px;
+
+    @media (max-width: 991px) {
+      padding-top: 73px;
+    }
+  }
 
   @include element('header') {
     h5 {

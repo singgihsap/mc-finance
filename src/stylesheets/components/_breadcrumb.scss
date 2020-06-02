@@ -1,0 +1,26 @@
+.breadcrumb {
+  background-color: transparent;
+
+  &-item {
+    & + .breadcrumb-item {
+      padding-left: 20px;
+
+      &:before {
+        content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2LjQ3MSIgaGVpZ2h0PSIxMS41MjciIHZpZXdCb3g9IjAgMCA2LjQ3MSAxMS41MjciPgogIDxwYXRoIGlkPSJQYXRoXzQxOTYiIGRhdGEtbmFtZT0iUGF0aCA0MTk2IiBkPSJNLTYwMjAuNDMyLTExOTg2Ljg1M2w1LjQxLDUuNDEtNS40MSw1LjQxIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MDIwLjc4NSAxMTk4Ny4yMDYpIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMSIvPgo8L3N2Zz4K');
+        padding-right: 20px;
+        margin-top: 2px;
+      }
+    }
+
+    &.active {
+      color: $mcf-yellow;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    a {
+      color: $white;
+      font-size: 13px;
+    }
+  }
+}

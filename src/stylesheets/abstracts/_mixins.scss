@@ -97,7 +97,7 @@
 
 /// MIXINS FOR PADDINGS
 @mixin offset-padding($padding, $value) {
-  padding-#{$padding}: $value;
+  padding-#{$padding}: $value !important;
 }
 
 @for $i from 0 through 20 {

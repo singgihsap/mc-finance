@@ -1,0 +1,41 @@
+.block {
+  @include element('header') {
+    text-align: center;
+
+    h1 {
+      font-size: 30px;
+      font-weight: bold;
+      color: $mcf-orange-old;
+      margin-bottom: 24px;
+
+      &.color-black {
+        color: #333333;
+      }
+
+      @media (max-width: 991px) {
+        font-size: 28px;
+        color: #333333;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      color: #656565;
+      margin-bottom: 30px !important;
+      line-height: 1.8;
+
+      @media (min-width: 1100px) {
+        width: 83%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @include modifier('color') {
+    background-color: #F5F5F5;
+  }
+
+  @include modifier('slider') {
+    padding: 25px 0;
+  }
+}

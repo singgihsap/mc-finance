@@ -1,4 +1,214 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
-.footer {}
+.footer {
+  padding-top: 20px;
+  border-top: 5px solid $mcf-orange-old;
+
+  @include element('content') {
+    padding: 30px 0;
+
+    .footer-company {
+      @media (max-width: 500px) {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+
+        .box__company {
+          padding: 0 15px;
+          padding-bottom: 20px;
+        }
+
+        .box__company-registered {
+          padding: 0 15px;
+          padding-top: 20px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    .title-header {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #656565;
+      font-weight: bold;
+    }
+
+    .box {
+      @include element('company') {
+        border-bottom: 2px solid $mcf-orange-old;
+
+        img {
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-size: 12px;
+          line-height: 1.8;
+        }
+
+        &-registered {
+          margin-top: 20px;
+          margin-bottom: 30px;
+
+          .title-header {
+            margin-bottom: 20px;
+          }
+
+          img {
+            margin-right: 20px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          img {
+            margin-bottom: 20px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+
+      @include element('sosmed') {
+        display: flex;
+
+        li {
+          margin-right: 25px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      ul {
+        li {
+          line-height: 2.3;
+
+          a {
+            font-size: 12px;
+            line-height: 2;
+
+            &:hover {
+              color: $mcf-orange-old;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      .input-group {
+        .input-group-append {
+          margin-left: -10px;
+        }
+
+        .form-control {
+          height: 40px;
+
+          &:focus {
+            box-shadow: none;
+            border-color: unset;
+            z-index: 0 !important;
+          }
+        }
+
+        .btn {
+          background-color: $mcf-orange;
+          border-color: $mcf-orange;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .block {
+      &-desktop {
+        @media (max-width: 441px) {
+          display: none;
+        }
+      }
+
+      &-mobile {
+        display: none;
+
+        @media (max-width: 441px) {
+          display: block;
+        }
+
+        .accordion {
+          margin-bottom: 15px;
+
+          .card {
+            border: 0;
+
+            &-header {
+              padding: 0;
+              background-color: transparent;
+              border: 0;
+
+              .btn-link {
+                padding-left: 0;
+                padding-right: 0;
+                display: block;
+                width: 100%;
+                text-transform: uppercase;
+                font-size: 16px;
+                color: #656565;
+                text-decoration: none;;
+                text-align: left;
+                font-weight: bold;
+
+                &:hover,
+                &:focus {
+                  outline: none;
+                  box-shadow: none;
+                }
+
+                &.collapsed:after {
+                  content: url("data:image/svg+xml;base64,PHN2ZyBpZD0iR3JvdXBfMTk2MyIgZGF0YS1uYW1lPSJHcm91cCAxOTYzIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4KICA8cmVjdCBpZD0iUmVjdGFuZ2xlXzI2MDYiIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDI2MDYiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgZmlsbD0ibm9uZSIvPgogIDxsaW5lIGlkPSJMaW5lXzE2NiIgZGF0YS1uYW1lPSJMaW5lIDE2NiIgeTI9IjEyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzA3MDcwIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8bGluZSBpZD0iTGluZV8xNjciIGRhdGEtbmFtZT0iTGluZSAxNjciIHkyPSIxMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTIgNikgcm90YXRlKDkwKSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzA3MDcwIiBzdHJva2Utd2lkdGg9IjEiLz4KPC9zdmc+Cg==");
+                }
+
+                &:after {
+                  content: url("data:image/svg+xml;base64,PHN2ZyBpZD0iR3JvdXBfMTk2MyIgZGF0YS1uYW1lPSJHcm91cCAxOTYzIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4KICA8cmVjdCBpZD0iUmVjdGFuZ2xlXzI2MDYiIGRhdGEtbmFtZT0iUmVjdGFuZ2xlIDI2MDYiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgZmlsbD0ibm9uZSIvPgogIDxsaW5lIGlkPSJMaW5lXzE2NyIgZGF0YS1uYW1lPSJMaW5lIDE2NyIgeTI9IjEyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMiA2KSByb3RhdGUoOTApIiBmaWxsPSJub25lIiBzdHJva2U9IiM3MDcwNzAiIHN0cm9rZS13aWR0aD0iMSIvPgo8L3N2Zz4K");
+                  float: right;
+                }
+              }
+            }
+
+            &-body {
+              padding: 0;
+
+              ul {
+                margin-bottom: 0;
+
+                li {
+                  a {
+                    font-size: 15px;
+                    line-height: 2.3;
+                    color: #656565;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include element('copyright') {
+    border-top: 2px solid $mcf-orange-old;
+    text-align: center;
+    padding: 20px 0;
+
+    p {
+      margin-bottom: 0;
+      font-size: 13px;
+
+      &.font-weight-bold {
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+    }
+  }
+}
